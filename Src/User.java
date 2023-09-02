@@ -1,17 +1,21 @@
 public class User {
     private String login;
-    Account account;
+    Acount acount;
 
     public User(String login, String password) {
         this.login = login;
-        account = new Account(password);
+        acount = new Acount(password);
     }
 
-    class Account {
+    class Acount {
         private String password;
 
-        public Account(String password) {
+        public Acount(String password) {
             this.password = password;
-            }
+        }
+
+       public void displayAccount(){
+            System.out.println("Account Login successful! Login : " + User.this.login + ", Password: " + this.password);
         }
     }
+}
